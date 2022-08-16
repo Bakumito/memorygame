@@ -27,11 +27,13 @@ let secondCard = ''
 const checkEndGame = () => {
   const disabledCards = document.querySelectorAll('.disabled-card')
 
-  if (disabledCards.length == 20) {
+  if (disabledCards.length == 2) {
     clearInterval(this.loop)
-    alert(
-      'Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}'
-    )
+    setTimeout(() => {
+      alert(
+        `Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`
+      )
+    }, 500)
   }
 }
 
